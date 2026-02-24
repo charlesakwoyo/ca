@@ -1,0 +1,348 @@
+:root {
+  --panel-bg: #46484b;
+  --panel-bg-2: #3f4144;
+  --panel-border: #d4ac32;
+  --gold: #d0a82f;
+  --gold-deep: #c79d24;
+  --soft-blue: #8ea7c1;
+  --text-light: #f2f2f2;
+  --card-rose: #f6d7df;
+  --card-mint: #e6f0c7;
+  --card-cream: #efe2b8;
+  --line-dark: #3f4143;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--panel-bg);
+  color: var(--text-light);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.site-main {
+  min-height: 100vh;
+}
+
+.membership-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at 8% 4%, rgba(255, 255, 255, 0.08) 0, rgba(255, 255, 255, 0) 24%),
+    linear-gradient(180deg, var(--panel-bg) 0%, var(--panel-bg-2) 100%);
+}
+
+.container-fluid {
+  max-width: 1280px;
+}
+
+.site-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+}
+
+.eyebrow {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.page-title {
+  font-size: clamp(1.3rem, 1rem + 1.2vw, 2rem);
+  line-height: 1.1;
+  font-weight: 700;
+  color: #fff;
+}
+
+.content-grid {
+  align-items: start;
+}
+
+.hero-card {
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  padding: 0.95rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.hero-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 25%, #f4f6f8 20%, #95a8bc 55%, #233b57 100%);
+  color: #10243a;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 1.45rem;
+  flex: 0 0 auto;
+  border: 2px solid #c8d1da;
+}
+
+.hero-name {
+  color: var(--text-light);
+  font-size: clamp(1.25rem, 1.1rem + 0.7vw, 1.6rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.hero-text {
+  color: #f0f0f0;
+  font-size: clamp(0.85rem, 0.8rem + 0.22vw, 0.97rem);
+  line-height: 1.35;
+  max-width: 40ch;
+  font-weight: 600;
+}
+
+.stats-grid {
+  margin-top: 0.95rem;
+}
+
+.stat-card {
+  border-radius: 10px;
+  padding: 0.72rem 0.72rem 0.66rem;
+}
+
+.stat-rose {
+  background: var(--card-rose);
+}
+
+.stat-mint {
+  background: var(--card-mint);
+}
+
+.stat-cream {
+  background: var(--card-cream);
+}
+
+.stat-user {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.mini-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1b2a3d;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  flex: 0 0 auto;
+}
+
+.mini-a {
+  background: linear-gradient(135deg, #0f0f14, #9c7f77);
+  color: #f5ece9;
+}
+
+.mini-b {
+  background: linear-gradient(135deg, #617ec0, #f0df8e);
+}
+
+.mini-c {
+  background: linear-gradient(135deg, #8dc3d9, #f3d8a2);
+}
+
+.mini-d {
+  background: linear-gradient(135deg, #d4b4ce, #f2c099);
+}
+
+.stat-name {
+  font-size: clamp(0.64rem, 0.6rem + 0.17vw, 0.72rem);
+  line-height: 1.05;
+  font-weight: 700;
+  color: #4c4c4c;
+}
+
+.stat-value {
+  margin-top: 0.35rem;
+  text-align: center;
+  font-size: clamp(1.55rem, 1.35rem + 0.8vw, 2rem);
+  font-weight: 800;
+  color: #2f2f2f;
+  line-height: 1;
+}
+
+.quote-card {
+  background: var(--line-dark);
+  border-radius: 8px;
+  padding: 0.9rem;
+}
+
+.quote-title {
+  color: var(--gold);
+  font-size: clamp(1rem, 0.94rem + 0.36vw, 1.35rem);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.quote-body {
+  color: #f0f0f0;
+  font-size: clamp(0.74rem, 0.7rem + 0.2vw, 0.87rem);
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.membership-toggle {
+  width: 100%;
+  border: 0;
+  border-radius: 8px 8px 0 0;
+  color: #e9eef3;
+  font-size: clamp(0.76rem, 0.72rem + 0.2vw, 0.86rem);
+  letter-spacing: 0.2px;
+  font-weight: 700;
+  padding: 0.55rem 0.72rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.foundation-toggle {
+  background: var(--gold-deep);
+}
+
+.economy-toggle {
+  margin-top: 0.62rem;
+  background: var(--soft-blue);
+}
+
+.membership-chevron {
+  transition: transform 0.22s ease;
+  font-size: 0.72rem;
+}
+
+.membership-toggle.collapsed .membership-chevron {
+  transform: rotate(-90deg);
+}
+
+.membership-description {
+  color: #ebebeb;
+  background: #4b4d4f;
+  border-radius: 0 0 8px 8px;
+  padding: 0.58rem 0.72rem;
+  font-size: clamp(0.7rem, 0.67rem + 0.15vw, 0.8rem);
+  line-height: 1.35;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 0;
+}
+
+.details-pill {
+  width: 100%;
+  border: 0;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #efe9d1;
+  font-size: clamp(0.68rem, 0.64rem + 0.18vw, 0.76rem);
+  font-weight: 700;
+  padding: 0.58rem 0.9rem;
+  line-height: 1.2;
+}
+
+.details-pill:hover,
+.details-pill:focus-visible {
+  filter: brightness(1.05);
+}
+
+.app-footer {
+  margin-top: auto;
+  width: 100%;
+  background: var(--gold);
+  color: #f5eecf;
+  font-size: clamp(0.64rem, 0.62rem + 0.12vw, 0.74rem);
+  font-weight: 600;
+  padding: 0.48rem 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.chat-fab {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: 2px solid #c8a437;
+  background: #24be63;
+  color: #fff;
+  font-size: 0.78rem;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+  padding: 0;
+  flex: 0 0 auto;
+}
+
+.chat-fab:hover,
+.chat-fab:focus-visible {
+  filter: brightness(1.08);
+}
+
+.modal-content {
+  border: 0;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+  color: #212529;
+}
+
+.modal-body .form-label {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.modal-body .small {
+  color: #374151;
+}
+
+@media (min-width: 992px) {
+  .container-fluid {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .hero-card {
+    min-height: 128px;
+  }
+
+  .quote-card {
+    min-height: 150px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .site-topbar {
+    align-items: start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-card {
+    align-items: flex-start;
+  }
+
+  .hero-avatar {
+    width: 56px;
+    height: 56px;
+  }
+
+  .app-footer {
+    padding: 0.42rem 0.65rem;
+  }
+}
